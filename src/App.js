@@ -1,24 +1,42 @@
-import logo from './logo.svg';
-import './App.css';
+import styled from "styled-components";
+import HamburgerMenu from "./components/layout/HamburgerMenu";
+import Header from "./components/layout/Header";
+import CardLayout from "./components/layout/CardLayout";
+import AboutMe from "./components/layout/AboutMe";
+
+
+const Wrap = styled.div`
+  max-width: 1100px;
+  padding : 40px 20px;
+`
+const MainContainer = styled.div`
+  color : white;
+  background-color: black;
+`
+const WrapContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`
 
 function App() {
+  
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <MainContainer>
+    <Header>
+   <HamburgerMenu/>
+    </Header>
+    <div style={{paddingTop : '50px'}}/>
+    <WrapContainer>
+      <Wrap>
+       <AboutMe/>
+        <div style={{height : '32px'}}/>
+      <CardLayout/>
+      </Wrap>
+      </WrapContainer>
+
+    </MainContainer>
   );
 }
 
