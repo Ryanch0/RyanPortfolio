@@ -26,7 +26,7 @@ const IsOpenTab = styled.div`
     background-color : black;
     color : white;
     width : 100%;
-    height : 200px;
+    height : 150px;
     ${props => props.$isopen ? `
         opacity : 1;
         transform : translateY(80px);
@@ -48,22 +48,52 @@ const Logo = styled.div`
 `
 const Menu = styled.div`
     margin-top : 24px;
+    cursor: pointer;
 `
 
 
 export default props => {
     const [isOpen, setIsOpen] = useState(false)
 
+    const scrollToAboutMe = () => {
+        window.scrollTo({
+            top : 56.5,
+            behavior : 'smooth', 
+        })
+    }
+
+    const scrollToSkills = () => {
+        window.scrollTo({
+            top: 945,
+            behavior :'smooth'
+        })
+    }
+
+    // const scrollToProjects =() => {
+    //     window.scrollTo({
+    //         top:,
+    //         behavior :'smooth'
+    //     })
+    // }
 
     return (
         <>
             <TabWrap>
                 <Logo>Sungwoo Cho</Logo>
                 <IsOpenTab $isopen={isOpen}>
-                    <Menu>About me</Menu>
-                    <Menu>Skills</Menu>
+                    <Menu
+                        onClick={()=>{
+                            scrollToAboutMe()
+                            setIsOpen(false)
+                        }}
+                    >About me</Menu>
+                    <Menu
+                        onClick={()=>{
+                            scrollToSkills()
+                            setIsOpen(false)
+                        }}
+                    >Skills</Menu>
                     <Menu>Projects</Menu>
-                    <Menu>Contact</Menu>
                 </IsOpenTab>
 
                 <Tab onClick={() => {

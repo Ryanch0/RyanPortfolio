@@ -1,17 +1,20 @@
 import styled from "styled-components";
-import HamburgerMenu from "./components/layout/HamburgerMenu";
 import Header from "./components/layout/Header";
 import CardLayout from "./components/layout/CardLayout";
 import AboutMe from "./components/layout/AboutMe";
+import Skills from "./components/layout/Skills";
+import { useEffect } from "react";
 
 
 const Wrap = styled.div`
+  width: 100%;
   max-width: 1100px;
-  padding : 40px 20px;
+  padding : 40px;
 `
 const MainContainer = styled.div`
   color : white;
   background-color: black;
+  overflow-x: hidden;
 `
 const WrapContainer = styled.div`
   display: flex;
@@ -19,21 +22,25 @@ const WrapContainer = styled.div`
 `
 
 function App() {
-  
+
+  useEffect(()=>{
+    console.log(window.scrollY)
+  },[])
+
 
 
   return (
     <MainContainer>
-    <Header>
-   <HamburgerMenu/>
-    </Header>
-    <div style={{paddingTop : '50px'}}/>
-    <WrapContainer>
-      <Wrap>
-       <AboutMe/>
-        <div style={{height : '32px'}}/>
-      <CardLayout/>
-      </Wrap>
+      <Header />
+      <div style={{ paddingTop: '50px' }} />
+
+      <WrapContainer>
+        <Wrap>
+          <AboutMe />
+          <div style={{ height: '150px' }} />
+          <Skills/>
+          <CardLayout />
+        </Wrap>
       </WrapContainer>
 
     </MainContainer>
