@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import Projects from "./components/layout/Projects";
 import Footer from "./components/layout/Footer";
 import { ScrollProvider } from "./contexts/ScrollContext";
+import NewProjects from "./components/layout/NewProjects";
 
 
 const Wrap = styled.div`
@@ -51,7 +52,8 @@ useEffect(() => {
           <AboutMe />
           <div style={{ height: '50px' }} />
           <Skills />
-          <Projects />
+          {/* <Projects /> */}
+          <NewProjects/>
           <Footer />
         </Wrap>
       </WrapContainer>

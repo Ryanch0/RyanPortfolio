@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import Card from '../atomic/atoms/Card'
 import { PRIMARY_COLOR } from '../../consts/color'
 import { ScrollContext } from '../../contexts/ScrollContext'
+import ProjectCard from '../atomic/atoms/ProjectCard'
 
 
 
@@ -39,17 +40,6 @@ const Title = styled.div`
 
 `
 
-
-const StyledCard = styled(Card)`
-`
-
-const CardBox = styled.div`
-    width: 100%;
-    @media screen and (min-width : 778px){
-        width : 44%;
-        margin-bottom: 12px;
-    }
-`
 
 const VisibleWrap = styled.div`
     opacity: 0;
@@ -93,26 +83,7 @@ export default props => {
             <Title $border={borderVisible}>Projects</Title>
             <VisibleWrap $visible={borderVisible}>
                 <Wrap>
-                    <CardBox>
-                        <StyledCard
-                            src='./lingo.png'
-                            name='LingoBell' />
-                    </CardBox>
-                    <CardBox>
-                        <StyledCard
-                            src='./stockVibe.png'
-                            name='StockVibe' />
-                    </CardBox>
-                    <CardBox>
-                        <StyledCard
-                            src='Liberte.png'
-                            name='Liberté et Amour' />
-                    </CardBox>
-                    <CardBox>
-                        <StyledCard
-                            src='./tuneMoods.jpeg'
-                            name='TuneMoods' />
-                    </CardBox>
+                    <ProjectCard/>
                 </Wrap>
             </VisibleWrap>
         </Container>

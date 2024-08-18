@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import styled from 'styled-components'
 
 
@@ -16,8 +16,15 @@ const ImageBox = styled.img`
     height: 100%;
     object-fit: contain;
     display: block;
-
+    cursor: pointer;
+    transform:scale(1.05);
+    transition: transform 0.3s ease; 
+    &:hover {
+    transform: scale(1.2); 
+}
 `
+
+
 const Link = styled.div`
     display: flex;
     justify-content: flex-start;
@@ -32,9 +39,10 @@ const ImageWrap = styled.div`
     align-items: center;
     width: 100%;
     height: 254px;
-    background-color: #D1CFF3;
-    border-radius: 28px;
+    background-color: white;
+    border-radius: 12px;
     overflow: hidden;
+    
 
 `
 const Wrap = styled.div`
@@ -42,6 +50,7 @@ const Wrap = styled.div`
 `
 
 export default props => {
+    const [modal, setModal] = useState(false);
 
     return (
         <Wrap>

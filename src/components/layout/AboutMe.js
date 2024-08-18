@@ -79,7 +79,6 @@ const AboutMe = styled.div`
 
 
     @media screen and (min-width : 668px) {
-        margin-left : 12px;
     }
 `
 
