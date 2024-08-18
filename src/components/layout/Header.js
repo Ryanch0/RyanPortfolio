@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from 'react'
+import React, { useContext, useEffect, useState } from 'react'
 import styled from 'styled-components'
 import HamburgerMenu from './HamburgerMenu'
+import { ScrollContext } from '../../contexts/ScrollContext'
 
 
 const ContainerWrap = styled.div`
@@ -22,13 +23,16 @@ const Container = styled.div`
 `
 
 const Logo = styled.div`
-    font-size: 28px;
+    font-family: cursive;
+    font-size: 30px;
     color : white;
+    cursor: pointer;
 `
 const MenuWrap = styled.div`
     display: flex;
 `
 const Menu = styled.div`
+    font-family: emoji;
     margin-right: 52px;
     cursor: pointer;
 `
@@ -37,19 +41,19 @@ const Menu = styled.div`
 
 export default props => {
     const [response, setResponse] = useState(false)
+    const { section1Ref, section2Ref } = useContext(ScrollContext);
 
     const scrollToAboutMe = () => {
         window.scrollTo({
-            top : 58,
+            top : 0,
             behavior : 'smooth', 
         })
     }
 
-    const scrollToSkills = () => {
-        window.scrollTo({
-            top: 840.5,
-            behavior :'smooth'
-        })
+    const scroller = (ref) => {
+      if(ref.current) {
+        ref.current.scrollIntoView({behavior : 'smooth'});
+      }
     }
 
     // const scrollToProjects =() => {
@@ -83,15 +87,21 @@ export default props => {
         <Container>
             {!response && (
                 <>
-                <Logo>Sungwoo Cho</Logo>
+                <Logo onClick={()=>{
+                    window.location.reload()
+                }}>Sungwoo Cho</Logo>
                 <MenuWrap>
                     <Menu
                         onClick={scrollToAboutMe}>
                             About me</Menu>
                     <Menu
-                        onClick={scrollToSkills}
+                        onClick={()=>{
+                            scroller(section1Ref)
+                        }}
                     >Skills</Menu>
-                    <Menu>Projects</Menu>
+                    <Menu onClick={()=>{
+                        scroller(section2Ref)
+                    }}>Projects</Menu>
                 </MenuWrap>
                 </>
             )}

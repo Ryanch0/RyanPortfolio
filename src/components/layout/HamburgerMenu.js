@@ -1,6 +1,6 @@
-import React, { useState } from 'react'
+import React, { useContext, useRef, useState } from 'react'
 import styled from 'styled-components'
-
+import { ScrollContext } from '../../contexts/ScrollContext'
 
 
 
@@ -17,6 +17,8 @@ const Tab = styled.button`
     color: white;
     width : 32px;
     height : 32px;
+    cursor : pointer;
+
 `
 const IsOpenTab = styled.div`
     position : fixed;
@@ -43,10 +45,13 @@ const IsOpenTab = styled.div`
     transition : all 0.6s ease;
 `
 const Logo = styled.div`
-    font-size: 28px;
+    font-family: cursive;
+    font-size: 30px;
     color : white;
+    cursor: pointer;
 `
 const Menu = styled.div`
+    font-family: emoji;
     margin-top : 24px;
     cursor: pointer;
 `
@@ -54,32 +59,29 @@ const Menu = styled.div`
 
 export default props => {
     const [isOpen, setIsOpen] = useState(false)
+    const { section1Ref, section2Ref } = useContext(ScrollContext);
+
 
     const scrollToAboutMe = () => {
         window.scrollTo({
-            top : 56.5,
+            top : 0,
             behavior : 'smooth', 
         })
     }
 
-    const scrollToSkills = () => {
-        window.scrollTo({
-            top: 945,
-            behavior :'smooth'
-        })
+    const scroller = (ref) => {
+        if (ref.current) {
+            ref.current.scrollIntoView({ behavior: 'smooth' });
+        }
     }
 
-    // const scrollToProjects =() => {
-    //     window.scrollTo({
-    //         top:,
-    //         behavior :'smooth'
-    //     })
-    // }
 
     return (
         <>
             <TabWrap>
-                <Logo>Sungwoo Cho</Logo>
+                <Logo onClick={()=>{
+                    window.location.reload()
+                }}>Sungwoo Cho</Logo>
                 <IsOpenTab $isopen={isOpen}>
                     <Menu
                         onClick={()=>{
@@ -89,11 +91,15 @@ export default props => {
                     >About me</Menu>
                     <Menu
                         onClick={()=>{
-                            scrollToSkills()
+                            scroller(section1Ref)
                             setIsOpen(false)
                         }}
                     >Skills</Menu>
-                    <Menu>Projects</Menu>
+                    <Menu
+                        onClick={()=>{
+                            scroller(section2Ref)
+                        }}
+                    >Projects</Menu>
                 </IsOpenTab>
 
                 <Tab onClick={() => {

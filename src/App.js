@@ -1,15 +1,17 @@
 import styled from "styled-components";
 import Header from "./components/layout/Header";
-import CardLayout from "./components/layout/CardLayout";
 import AboutMe from "./components/layout/AboutMe";
 import Skills from "./components/layout/Skills";
 import { useEffect } from "react";
+import Projects from "./components/layout/Projects";
+import Footer from "./components/layout/Footer";
+import { ScrollProvider } from "./contexts/ScrollContext";
 
 
 const Wrap = styled.div`
   width: 100%;
   max-width: 1100px;
-  padding : 40px;
+  padding : 0px 20px 40px 20px;
 `
 const MainContainer = styled.div`
   color : white;
@@ -23,13 +25,23 @@ const WrapContainer = styled.div`
 
 function App() {
 
-  useEffect(()=>{
-    console.log(window.scrollY)
-  },[])
+  const logScrollPosition = () => {
+    console.log('Scroll Position:', window.scrollY);
+};
 
+useEffect(() => {
+    // 스크롤 이벤트 리스너 추가
+    window.addEventListener('scroll', logScrollPosition);
+
+    // 컴포넌트 언마운트 시 이벤트 리스너 제거
+    return () => {
+        window.removeEventListener('scroll', logScrollPosition);
+    };
+}, []); // 빈 배열로 지정하여 마운트 및 언마운트 시에만 실행
 
 
   return (
+    <ScrollProvider>
     <MainContainer>
       <Header />
       <div style={{ paddingTop: '50px' }} />
@@ -37,13 +49,14 @@ function App() {
       <WrapContainer>
         <Wrap>
           <AboutMe />
-          <div style={{ height: '150px' }} />
-          <Skills/>
-          <CardLayout />
+          <div style={{ height: '50px' }} />
+          <Skills />
+          <Projects />
+          <Footer />
         </Wrap>
       </WrapContainer>
-
     </MainContainer>
+    </ScrollProvider>
   );
 }
 
