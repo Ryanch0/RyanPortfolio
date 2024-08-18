@@ -17,22 +17,22 @@ const Container = styled.div`
     }
 `
 const Title = styled.div`
-    font-size: 40px;
-    font-weight: 500;
+    font-size: 24px;
+    font-weight: 600;
+    padding-bottom: 16px;
 `
 const Period = styled.div`
-    font-size: 22px;
-    font-weight: 200;
+    font-size: 18px;
+    font-weight: 100;
+    color : rgba(256,256,256,0.8);
 `
 const HeaderWrap = styled.div`
-    background-color: red;
     width: 100%;
-    height: 200px; //test
-    display: block;
-    /* flex-direction: column;
-    justify-content: center;
-    align-items: center; */
-`
+    height: 100%;
+    display: flex;
+    flex-direction : column;
+    align-items: center;
+    `
 
 const FlexWrap = styled.div`
     width: 100%;
@@ -102,8 +102,8 @@ export default props => {
     return (
         <Container>
             <HeaderWrap>
-                <Title>ProjectName</Title>
-                <Period>How long did it take</Period>
+                <Title>{props.title}</Title>
+                <Period>{props.period}</Period>
             </HeaderWrap>
 
             <FlexWrap>

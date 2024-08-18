@@ -50,7 +50,7 @@ const VisibleWrap = styled.div`
     `}
 `
 export default props => {
-    const [borderVisible, setBorderVisible] = useState(false);
+    const [borderVisible, setBorderVisible] = useState(true);
     const { section2Ref } = useContext(ScrollContext);
 
     const handleBorderVisible = () => {
@@ -83,7 +83,10 @@ export default props => {
             <Title $border={borderVisible}>Projects</Title>
             <VisibleWrap $visible={borderVisible}>
                 <Wrap>
-                    <ProjectCard/>
+                    <ProjectCard
+                        title='LingoBell'
+                        period='2024.07.15 – 2024.08.26'
+                    />
                 </Wrap>
             </VisibleWrap>
         </Container>

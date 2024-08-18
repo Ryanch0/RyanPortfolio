@@ -38,7 +38,6 @@ const ImageWrap = styled.div`
     justify-content: center;
     align-items: center;
     width: 100%;
-    height: 254px;
     background-color: white;
     border-radius: 12px;
     overflow: hidden;
@@ -50,7 +49,6 @@ const Wrap = styled.div`
 `
 
 export default props => {
-    const [modal, setModal] = useState(false);
 
     return (
         <Wrap>
