@@ -98,6 +98,7 @@ export default props => {
                     <Menu
                         onClick={()=>{
                             scroller(section2Ref)
+                            setIsOpen(false)
                         }}
                     >Projects</Menu>
                 </IsOpenTab>

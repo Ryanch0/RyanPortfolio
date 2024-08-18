@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useState } from 'react'
 import styled from 'styled-components'
-import Card from '../atomic/atoms/Card'
 import { PRIMARY_COLOR } from '../../consts/color'
 import { ScrollContext } from '../../contexts/ScrollContext'
-import ProjectCard from '../atomic/atoms/ProjectCard'
+import ProjectCard from '../atomic/molecules/ProjectCard'
+import SampleData from '../atomic/atoms/SampleData'
 
 
 
@@ -50,7 +50,7 @@ const VisibleWrap = styled.div`
     `}
 `
 export default props => {
-    const [borderVisible, setBorderVisible] = useState(true);
+    const [borderVisible, setBorderVisible] = useState(false);
     const { section2Ref } = useContext(ScrollContext);
 
     const handleBorderVisible = () => {
@@ -75,7 +75,20 @@ export default props => {
         window.addEventListener('scroll', handleBorderVisible);
     }, [])
 
+    const images = [
+        './lingo.png',
+        'https://via.placeholder.com/600x400?text=Image+2',
+        'https://via.placeholder.com/600x400?text=Image+3',
+    ];
 
+    const lingobellData = {
+        mainContent: '실시간 1:1 영상통화와 사용자의 관심사 및 언어별 stt번역 생성, ai퀴즈 및 주제추천이 가능한 언어교환 플랫폼',
+        frontEnd: 'React, Styled-Components',
+        backEnd: 'FastAPI, NodeJs',
+        dataBase: 'MySQL',
+        baas: 'Firebase (Authentication, Cloud Messaging, Realtime Database), Google Cloud Storage',
+        url : 'https://www.youtube.com/watch?v=9Urj-Ce82VY'
+    }
 
     return (
         <Container ref={section2Ref}>
@@ -85,8 +98,12 @@ export default props => {
                 <Wrap>
                     <ProjectCard
                         title='LingoBell'
-                        period='2024.07.15 – 2024.08.26'
-                    />
+                        period='2024.07.15 – 2024.08.26 (조성우 외 3인 팀 프로젝트)'
+                        images={images}
+                        data={lingobellData}
+                    >
+                        <SampleData/>
+                    </ProjectCard>
                 </Wrap>
             </VisibleWrap>
         </Container>
