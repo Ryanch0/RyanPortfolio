@@ -218,7 +218,6 @@ const Standard = styled.div`
 export default props => {
 
     const { images, data } = props
-
     const [currentIndex, setCurrentIndex] = useState(0);
 
     const handlePrev = () => {
@@ -260,9 +259,9 @@ export default props => {
                     </CarouselWrap>
 
                     <IndexCounter>
-                        <span>‹</span>
+                        <span onClick={handlePrev}>‹</span>
                         {currentIndex + 1}/{images.length}
-                        <span>›</span>
+                        <span onClick={handleNext}>›</span>
                     </IndexCounter>
                 </div>
 
