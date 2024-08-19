@@ -14,9 +14,10 @@ export const lingobellImage = [
 export const lingobellData = {
     mainContent: '실시간 1:1 영상통화와 사용자의 관심사 및 언어별 stt번역 생성, ai퀴즈 및 주제추천이 가능한 언어교환 플랫폼',
     frontEnd: 'React, Styled-Components',
-    backEnd: 'FastAPI, NodeJs',
+    backEnd: 'FastAPI, NodeJs, PyTorch',
     dataBase: 'MySQL',
     baas: 'Firebase (Authentication, Cloud Messaging, Realtime Database), Google Cloud Storage',
+    deployment : 'GCP',
     url : 'https://www.youtube.com/watch?v=9Urj-Ce82VY'
 }
 
@@ -30,11 +31,12 @@ export const stockvibeImage = [
 ]
 
 export const stockvibeData = {
-    mainContent: '실시간 1:1 영상통화와 사용자의 관심사 및 언어별 stt번역 생성, ai퀴즈 및 주제추천이 가능한 언어교환 플랫폼',
+    mainContent: '국내 주식정보와 관련된 주식 토론, 뉴스기사 요약 및 긍정/부정 분석',
     frontEnd: 'React, Styled-Components',
-    backEnd: 'FastAPI, NodeJs',
+    backEnd: 'FastAPI, PyTorch',
     dataBase: 'MySQL',
-    baas: 'Firebase (Authentication, Cloud Messaging, Realtime Database), Google Cloud Storage',
+    baas: 'Firebase(Realtime Database)',
+    deployment : 'AWS',
 }
 
 export const tuneMoodsImage = [
@@ -45,11 +47,12 @@ export const tuneMoodsImage = [
 ]
 
 export const tuneMoodsData = {
-    mainContent: '실시간 1:1 영상통화와 사용자의 관심사 및 언어별 stt번역 생성, ai퀴즈 및 주제추천이 가능한 언어교환 플랫폼',
-    frontEnd: 'React, Styled-Components',
-    backEnd: 'FastAPI, NodeJs',
+    mainContent: '회원기반 사용자의 감정 분석을 통해 Youtube 노래추천, 재생, 플레이리스트 기능 지원',
+    frontEnd: 'React, CSS',
+    backEnd: 'Flask, SpringBoot',
     dataBase: 'MySQL',
-    baas: 'Firebase (Authentication, Cloud Messaging, Realtime Database), Google Cloud Storage',
+    baas:'YouTubeAPI',
+    readme : 'https://github.com/Ryanch0/TuneMoods_Project',
 }
 
 export const  liberteImage= [
@@ -60,9 +63,9 @@ export const  liberteImage= [
 ]
 
 export const liberteData = {
-    mainContent: '실시간 1:1 영상통화와 사용자의 관심사 및 언어별 stt번역 생성, ai퀴즈 및 주제추천이 가능한 언어교환 플랫폼',
-    frontEnd: 'React, Styled-Components',
-    backEnd: 'FastAPI, NodeJs',
-    dataBase: 'MySQL',
-    baas: 'Firebase (Authentication, Cloud Messaging, Realtime Database), Google Cloud Storage',
+    mainContent: '회원인증 및 상품조회 쇼핑몰',
+    frontEnd: 'React, CSS',
+    backEnd: 'NodeJs, Express',
+    dataBase: 'MongoDB',
+    readme : 'https://github.com/Ryanch0/Libert-et-Amour_Project',
 }

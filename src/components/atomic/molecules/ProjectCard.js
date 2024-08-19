@@ -167,8 +167,10 @@ const Content = styled.div`
 
 
 const DetailsWrap = styled.div`
+    width: 100%;
     display : flex;
     flex-direction: column;
+    align-items: baseline;
     padding-top: 16px;
     row-gap: 12px;
 
@@ -179,6 +181,11 @@ const DetailsWrap = styled.div`
 
 const Details = styled.div`
     line-height: 24px;
+    a{
+        font-size: 18px;
+    }
+
+
 `
 const Standard = styled.div`
     min-width: 100px;
@@ -277,25 +284,52 @@ export default props => {
                         </Details>
                     </DetailsWrap>
 
-                    <DetailsWrap>
-                        <Standard>
-                            BaaS
-                        </Standard>
-                        <Details>
-                            {data.baas}
-                        </Details>
-                    </DetailsWrap>
+                    {data.baas && (
+                        <DetailsWrap>
+                            <Standard>
+                                BaaS
+                            </Standard>
+                            <Details>
+                                {data.baas}
+                            </Details>
+                        </DetailsWrap>
+                    )}
+
+                    {data.deployment && (
+                        <DetailsWrap>
+                            <Standard>
+                                Deployment
+                            </Standard>
+                            <Details>
+                                {data.deployment}
+                            </Details>
+                        </DetailsWrap>
+                    )}
+
+                    {data.readme && (
+                        <DetailsWrap>
+                            <Standard>
+                                More detail
+                            </Standard>
+                            <Details>
+                                <a href={data.readme}
+                                    target='_blank'
+                                    style={{ color: '#FF6B6B' }}
+                                >README</a>
+                            </Details>
+                        </DetailsWrap>
+                    )}
 
                     {data.url && (
                         <DetailsWrap>
                             <Standard>
-                                Youtube
+                                More detail
                             </Standard>
                             <Details>
-                               <a href={data.url} 
-                                target='_blank'
-                                style={{color:'#FF6B6B'}}
-                               >{data.url}</a>
+                                <a href={data.url}
+                                    target='_blank'
+                                    style={{ color: '#FF6B6B' }}
+                                >Youtube</a>
                             </Details>
                         </DetailsWrap>
 
