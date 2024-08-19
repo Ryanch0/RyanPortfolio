@@ -1,5 +1,4 @@
 export const lingobellImage = [
-    "https://via.placeholder.com/150", // test
     './projectImages/lingobell1.png',
     './projectImages/lingobell2.png',
     './projectImages/lingobell3.png',
