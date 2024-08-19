@@ -241,8 +241,6 @@ export default props => {
                     </IndexCounter>
                 </div>
 
-
-
                 <ContentWrap>
                     <Content>
                         {props.children}
@@ -332,13 +330,8 @@ export default props => {
                                 >Youtube</a>
                             </Details>
                         </DetailsWrap>
-
                     )}
-
-
-
                 </ContentWrap>
-
             </FlexWrap>
         </Container>
     )

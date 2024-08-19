@@ -1,45 +1,56 @@
 import React from 'react'
 import styled, { keyframes } from 'styled-components'
+
+
+const Container = styled.div`
+line-height: 26px;
+word-break: keep-all;
+
+`
+
+const MainHightLight = styled.span`
+    color : #A2FACF;
+    font-weight: 700;
+`
+
+const HighLight = styled.span`
+    color : #FF69B4;
+`
+
+const FontWrap = styled.div`
+    font-size: 14px;
+
+    @media screen and (min-width : 778px) {
+        font-size: 15px;
+    }
+`
+
 export default props => {
 
-    const gradientAnimation = keyframes`
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-`;
-
-    const Container = styled.div`
-    line-height: 26px;
-    word-break: keep-all;
-
-        span {
-            font-size: 18px;
-            background: linear-gradient(to right, #75F9D8, #FF6B6B, #4EC5B0, #F94144);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-            color: transparent;
-            background-size: 200% 200%;  /* 애니메이션이 부드럽게 보이도록 배경 크기를 설정 */
-            animation: ${gradientAnimation} 5s ease infinite;
-        }
-`
 
     return (
         <Container>
-            <p>LingoBell은 실시간 다국어 번역과 다양한 ai서비스를 통한 영상통화기반 언어교환 플랫폼입니다.
-                <span>Google Gemini API Developer Competition</span>에 참가했습니다.</p>
-            <div style={{ height: '15px' }} />
-            <p>프론트엔드 뿐만 아니라 백엔드에도 적극 참여했고, 다른 팀원들과 협업하는 과정에 관해 많은 것을 배울 수 있었습니다.
-            </p>
-            <div style={{ height: '15px' }} />
             <p>
-                React 컴포넌트의 모듈화와 css의 재사용성 향상에 많은 도움이 되었고 회원 전역관리 및 
-                사용자 인증 미들웨어 개념과 구현에 많이 도움이 된 프로젝트입니다.
-                </p>
-            <div style={{ height: '15px' }} />
-
-            <p>Firebase를 이용해 '인증', '알림메시지', '실시간 접속상태 유무' 등의 기능을 처음 접하더라도 이해하고 구현할 수 있는 좋은 기회였습니다.
+                <MainHightLight>Liberté et Amour는 '자유와 사랑' 이라는 의미를 가진 프랑스 모델 컨셉 쇼핑몰 입니다. </MainHightLight>
             </p>
+            <div style={{ height: '15px' }} />
+            <FontWrap>
+                <p>
+                    웹 개발을 독학으로 접하고 난 뒤 5개월만에 진행했던 <HighLight>풀스택 프로젝트</HighLight> 입니다. 모든 기획을 처음으로 해보고 
+                    많은 시행착오를 접하며 미숙하게 끝이 난 프로젝트지만 저에게 웹개발에 있어서 첫 단추를 끼워준 소중한 프로젝트 입니다.
+                </p>
+                <div style={{ height: '15px' }} />
+                <p>
+                    협업에서 요구하는 효율성과는 거리가 멀게 코드를 작성 했었고, 이 시기에는 기능의 작동 여부에만 매달려서 진행했었습니다.
+                    많이 성장한 현재와 비교해보면 제 자신이 얼마나 <HighLight>우물안 개구리</HighLight>였는지 알 수 있게 되었습니다.
+                </p>
+                <div style={{ height: '15px' }} />
+                <p>
+                    NodeJs와 Express로 서버를 구축하는 방법에 대해 익히고,
+                    Session기반 회원 인증에 대해 이해하게 되었습니다.
+                    JSON데이터를 비동기적으로 통신하는것에 대해 이해하게 되었습니다.
+                </p>
+            </FontWrap>
 
         </Container>
     )
