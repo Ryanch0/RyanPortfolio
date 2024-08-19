@@ -108,7 +108,7 @@ const LangWrap = styled.div`
     width: 100%;
     flex-wrap: wrap;
     @media screen and (min-width : 778px) {
-        padding : 36px;
+        /* padding : 36px; */
     }
 `
 
