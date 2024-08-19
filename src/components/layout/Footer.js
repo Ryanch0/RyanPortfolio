@@ -13,7 +13,7 @@ const Footer = styled.div`
     font-family: emoji;
     color : ${PRIMARY_COLOR};
         >span{
-            font-family: cursive;
+            font-family: emoji;
             color : white;
         }
 `
