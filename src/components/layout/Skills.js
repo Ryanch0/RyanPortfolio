@@ -271,7 +271,7 @@ export default props => {
                         onMouseEnter={handleMouseHover}
                         onMouseLeave={hanldeMouseLeave}
                     >
-                        <LangTitle>DevOps</LangTitle>
+                        <LangTitle>BaaS</LangTitle>
                         <Detail>AWS&nbsp;
                             <img src='./skillsIcon/aws.png' /></Detail>
                         <Detail>Firebase&nbsp;
