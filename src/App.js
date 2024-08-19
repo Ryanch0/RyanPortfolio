@@ -31,7 +31,7 @@ function App() {
       <StartLayout />
       <MainContainer>
         <Header />
-        <div style={{ paddingTop: '50px' }} />
+        <div style={{ height: '50px' }} />
         <WrapContainer>
           <Wrap>
             <AboutMe />

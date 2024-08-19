@@ -7,16 +7,18 @@ import { ScrollContext } from '../../contexts/ScrollContext'
 const ContainerWrap = styled.div`
     display: flex;
     justify-content: center;
+    background-color: black;
+    width: 100vw;
 `
 
 const Container = styled.div`
     width : 100%;
-    max-width: 1100px;
+    max-width: 1300px;
     height : 80px;
     position : fixed;
+    top : 0;
     background-color : black;
     z-index: 1000;
-    padding : 25px 20px 25px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -25,8 +27,13 @@ const Container = styled.div`
 const Logo = styled.div`
     font-family: cursive;
     font-size: 30px;
+    padding-left: 12px;
     color : white;
     cursor: pointer;
+
+    @media screen and (min-width: 778px){ 
+        padding-left: 0;
+    }
 `
 const MenuWrap = styled.div`
     display: flex;

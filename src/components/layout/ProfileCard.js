@@ -20,8 +20,8 @@ const Container = styled.div`
 
 const ImageBox = styled.div`
 
-    background-color: blue;
-    background-image: url('./sungwoo.png');
+    background-color: white;
+    background-image: url('./Sungwoo.png');
     background-size: cover;
     background-position: 50%;
     width: 150px;
