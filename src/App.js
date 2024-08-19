@@ -2,11 +2,10 @@ import styled from "styled-components";
 import Header from "./components/layout/Header";
 import AboutMe from "./components/layout/AboutMe";
 import Skills from "./components/layout/Skills";
-import { useEffect } from "react";
-import Projects from "./components/layout/Projects";
 import Footer from "./components/layout/Footer";
 import { ScrollProvider } from "./contexts/ScrollContext";
 import NewProjects from "./components/layout/NewProjects";
+import StartLayout from "./components/layout/StartLayout";
 
 
 const Wrap = styled.div`
@@ -18,6 +17,7 @@ const MainContainer = styled.div`
   color : white;
   background-color: black;
   overflow-x: hidden;
+
 `
 const WrapContainer = styled.div`
   display: flex;
@@ -28,19 +28,20 @@ function App() {
 
   return (
     <ScrollProvider>
-    <MainContainer>
-      <Header />
-      <div style={{ paddingTop: '50px' }} />
-      <WrapContainer>
-        <Wrap>
-          <AboutMe />
-          <div style={{ height: '50px' }} />
-          <Skills />
-          <NewProjects/>
-          <Footer />
-        </Wrap>
-      </WrapContainer>
-    </MainContainer>
+      <StartLayout />
+      <MainContainer>
+        <Header />
+        <div style={{ paddingTop: '50px' }} />
+        <WrapContainer>
+          <Wrap>
+            <AboutMe />
+            <div style={{ height: '50px' }} />
+            <Skills />
+            <NewProjects />
+            <Footer />
+          </Wrap>
+        </WrapContainer>
+      </MainContainer>
     </ScrollProvider>
   );
 }

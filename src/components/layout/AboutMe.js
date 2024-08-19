@@ -104,7 +104,6 @@ export default props => {
             setVisible(true);
         } else if (window.scrollY >= scrollOpacity) {
             setVisible(false)
-            console.log('hidden')
         }
     }
 
