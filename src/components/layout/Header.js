@@ -56,13 +56,6 @@ export default props => {
       }
     }
 
-    // const scrollToProjects =() => {
-    //     window.scrollTo({
-    //         top:,
-    //         behavior :'smooth'
-    //     })
-    // }
-
     useEffect(() => {
         const handleResize = () => {
           if (window.innerWidth >= 778) {

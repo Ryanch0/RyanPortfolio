@@ -55,7 +55,7 @@ export const tuneMoodsData = {
     readme : 'https://github.com/Ryanch0/TuneMoods_Project',
 }
 
-export const  liberteImage= [
+export const liberteImage= [
     './projectImages/liberte1.gif',
     './projectImages/liberte2.gif',
     './projectImages/liberte3.gif',

@@ -185,6 +185,9 @@ const Details = styled.div`
         font-size: 18px;
     }
 
+    img{
+
+    }
 
 `
 const Standard = styled.div`
@@ -312,8 +315,15 @@ export default props => {
                             <Details>
                                 <a href={data.readme}
                                     target='_blank'
-                                    style={{ color: '#FF6B6B' }}
-                                >README</a>
+                                    style={{ color: 'white'}}
+                                >
+                                    <div style={{display : 'flex', alignItems : 'center'}}>
+                                    README
+                                    <img 
+                                        style={{paddingLeft : '4px', marginBottom : '2px'}}
+                                        src='./skillsIcon/github.png' />
+                                    </div>
+                                </a>
                             </Details>
                         </DetailsWrap>
                     )}
@@ -327,7 +337,14 @@ export default props => {
                                 <a href={data.url}
                                     target='_blank'
                                     style={{ color: '#FF6B6B' }}
-                                >Youtube</a>
+                                >
+                                    <div style={{ display: 'flex', alignItems: 'center' }}>
+                                        Youtube
+                                        <img
+                                            style={{ paddingLeft: '4px' }}
+                                            src='./skillsIcon/youtubeIcon.png' />
+                                    </div>
+                                </a>
                             </Details>
                         </DetailsWrap>
                     )}

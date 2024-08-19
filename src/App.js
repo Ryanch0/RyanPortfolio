@@ -26,21 +26,6 @@ const WrapContainer = styled.div`
 
 function App() {
 
-//   const logScrollPosition = () => {
-//     console.log('Scroll Position:', window.scrollY);
-// };
-
-// useEffect(() => {
-//     // 스크롤 이벤트 리스너 추가
-//     window.addEventListener('scroll', logScrollPosition);
-
-//     // 컴포넌트 언마운트 시 이벤트 리스너 제거
-//     return () => {
-//         window.removeEventListener('scroll', logScrollPosition);
-//     };
-// }, []); // 빈 배열로 지정하여 마운트 및 언마운트 시에만 실행
-
-
   return (
     <ScrollProvider>
     <MainContainer>

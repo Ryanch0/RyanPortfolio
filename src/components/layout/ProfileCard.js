@@ -62,7 +62,7 @@ const Myinfo = styled.div`
     align-items: center;
     padding : 4px;
         >span { 
-           font-size : 28px;
+           font-size : 24px;
            margin-right: 12px;
         }
         >img {
@@ -94,8 +94,9 @@ export default props => {
                 <FirstDetail>
                     <Myinfo><span>👤</span> 조성우</Myinfo>
                     <Myinfo><span>🎂</span> 1997.03.31</Myinfo>
-                    <Myinfo><span>✉️</span> tjddnfkdls0@naver.com</Myinfo>
+                    <Myinfo><span>✉️</span> tjddnfkdls0@gmail.com</Myinfo>
                 </FirstDetail>
+                
 
                 <SecondDetail>
                     <Myinfo><span>🎓</span> 수원대학교 (전자재료공학과)</Myinfo>
