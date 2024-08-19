@@ -158,6 +158,7 @@ const RightButtonArea = styled(ButtonArea)`
 `;
 
 const IndexCounter = styled.div`
+    padding-top: 12px;
     font-size: 14px;
     >span{
         padding : 0 12px 0 12px;
