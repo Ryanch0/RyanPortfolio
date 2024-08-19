@@ -138,6 +138,7 @@ const Tab = styled.button`
     cursor : pointer;
     border: none;
     padding: 0;
+    margin-right : 6px;
 
     /* 애니메이션을 위해 추가된 부분 */
     position: relative;
@@ -209,10 +210,11 @@ const IsOpenTab = styled.div`
 `;
 
 const Logo = styled.div`
-    font-family: cursive;
-    font-size: 30px;
+    font-family: emoji;
+    font-size: 28px;
     color : white;
     cursor: pointer;
+    padding-left: 6px;
 `;
 
 const Menu = styled.div`

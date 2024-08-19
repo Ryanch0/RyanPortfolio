@@ -30,6 +30,28 @@ const Period = styled.div`
         font-size: 16px;
     }
 `
+const PeriodDetail = styled.div`
+    font-size: 15px;
+    font-weight: 100;
+    color : rgba(256,256,256,0.8);
+    margin-left: 6px;
+    margin-top: 6px;
+    @media screen and (min-width: 778px) {
+        font-size: 16px;
+        margin-top: 0px;
+
+    }
+`
+const PeriodWrap = styled.div`
+    display : flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    @media screen and (min-width: 778px) {
+        flex-direction: row;
+    }
+`
+
 const HeaderWrap = styled.div`
     width: 100%;
     height: 100%;
@@ -220,7 +242,10 @@ export default props => {
         <Container>
             <HeaderWrap>
                 <Title>{props.title}</Title>
+                <PeriodWrap>
                 <Period>{props.period}</Period>
+                <PeriodDetail>{props.periodDetail}</PeriodDetail>
+                </PeriodWrap>
             </HeaderWrap>
 
             <FlexWrap>
@@ -315,7 +340,7 @@ export default props => {
                             <Details>
                                 <a href={data.readme}
                                     target='_blank'
-                                    style={{ color: 'white'}}
+                                    style={{ color: 'white', textDecoration : 'none'}}
                                 >
                                     <div style={{display : 'flex', alignItems : 'center'}}>
                                     README
@@ -336,7 +361,7 @@ export default props => {
                             <Details>
                                 <a href={data.url}
                                     target='_blank'
-                                    style={{ color: '#FF6B6B' }}
+                                    style={{ color: '#FF6B6B', textDecoration : 'none'}}
                                 >
                                     <div style={{ display: 'flex', alignItems: 'center' }}>
                                         Youtube

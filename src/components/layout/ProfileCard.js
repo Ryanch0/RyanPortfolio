@@ -31,7 +31,7 @@ const ImageBox = styled.div`
     @media screen and (max-width : 470px ) {
         display: none;
     }
-    @media screen and (min-width: 668px) {
+    @media screen and (min-width: 778px) {
         width: 180px;
         height: 180px;
     }
@@ -44,7 +44,7 @@ const FirstDetail = styled.div`
     color : white;
     order : 1;
 
-    @media screen and (min-width: 668px) {
+    @media screen and (min-width: 778px) {
         margin-right: 12px;
     }
 
@@ -81,7 +81,7 @@ const DetailWrap = styled.div`
     flex-direction: column;
     padding-left : 24px;
     
-    @media screen and (min-width:668px) {
+    @media screen and (min-width:778px) {
         flex-direction: row;
     }
 `
@@ -89,23 +89,26 @@ const DetailWrap = styled.div`
 export default props => {
     return (
         <Container>
-            <ImageBox/>
+            <ImageBox />
             <DetailWrap>
                 <FirstDetail>
                     <Myinfo><span>👤</span> 조성우</Myinfo>
                     <Myinfo><span>🎂</span> 1997.03.31</Myinfo>
                     <Myinfo><span>✉️</span> tjddnfkdls0@gmail.com</Myinfo>
                 </FirstDetail>
-                
+
 
                 <SecondDetail>
                     <Myinfo><span>🎓</span> 수원대학교 (전자재료공학과)</Myinfo>
                     <Myinfo><span>📞</span> 010-8209-9297</Myinfo>
-                    <Myinfo><img src='./skillsIcon/github.png' />
-                    <a
-                     href='https://github.com/Ryanch0'
-                     target='_blank'
-                    >https://github.com/Ryanch0</a></Myinfo>
+                    <Myinfo>
+                        <img src='./skillsIcon/github.png' />
+                        <a
+                            href='https://github.com/Ryanch0'
+                            target='_blank'
+                            style={{ textDecoration: 'none' }}
+                        >https://github.com/Ryanch0</a>
+                        </Myinfo>
                 </SecondDetail>
             </DetailWrap>
         </Container>

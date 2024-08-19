@@ -7,11 +7,11 @@ import { PRIMARY_COLOR } from '../../consts/color'
 const Intro = styled.div`
     text-align: center;
     font-weight: 400;
-    font-size: 22px;
-    line-height: 36px;
+    font-size: 20px;
+    line-height: 24px;
 
-    @media screen and (min-width: 668px) {
-        font-size: 24px;
+    @media screen and (min-width: 778px) {
+        font-size: 22px;
     }
       
 `
@@ -26,11 +26,12 @@ const gradientAnimation = keyframes`
 const Detail = styled.div`
     text-align: center;
     font-weight: 400;
-    padding : 24px 24px;
+    padding : 12px 12px;
     font-size: 15px;
-    line-height: 30px;
-    @media screen and (min-width: 668px) {
+    line-height: 26px;
+    @media screen and (min-width: 778px) {
         font-size: 16px;
+        line-height: 28px;
     }
         >p {
             word-break: keep-all;
@@ -63,22 +64,22 @@ const Wrap = styled.div`
 
 const AboutMe = styled.div`
     font-family: emoji;
-    font-size: 40px;
+    font-size: 34px;
     color : transparent;
     padding-bottom: 10px;
-    margin-bottom: 36px;
+    margin-bottom: 12px;
     padding-top : 48px;
     border-bottom: 1px solid transparent;
     transition: border-bottom-color 1s ease-in-out, color 0.4s ease-in-out;
-    
 
     ${props => props.$border && `
         border-bottom-color : ${PRIMARY_COLOR};
         color : ${PRIMARY_COLOR};
     `}
 
-
-    @media screen and (min-width : 668px) {
+    @media screen and (min-width : 778px) {
+        font-size : 40px;
+        margin-bottom : 24px;
     }
 `
 

@@ -13,8 +13,8 @@ const Container = styled.div`
 
 const Title = styled.div`
     font-family: emoji;
-    font-size: 40px;
-    margin-bottom: 24px;
+    font-size: 34px;
+    margin-bottom: 12px;
     padding-bottom: 10px;
     color : transparent;
     border-bottom: 1px solid transparent;
@@ -25,7 +25,9 @@ const Title = styled.div`
         color : ${PRIMARY_COLOR};
     `}
 
-    @media screen and (min-width : 668px) {
+    @media screen and (min-width : 778px) {
+        font-size : 40px;
+        margin-bottom: 24px;
     }
 `
 
@@ -39,13 +41,14 @@ const gradientAnimation = keyframes`
 const Description = styled.div`
     max-width: 800px;
     font-size: 15px;
-    line-height: 30px;
+    line-height: 26px;
     font-weight: 400;
     text-align: center;
     padding : 0 0 24px 0;
     word-break: keep-all;
-    @media screen and (min-width : 668px ){
+    @media screen and (min-width : 778px ){
         font-size: 16px;
+        line-height: 28px;
     }
 
     span{
@@ -80,17 +83,22 @@ const Wrap = styled.div`
 
 const LangTitle = styled.div`
     font-family: emoji;
-    font-size: 34px;
+    font-size: 28px;
     color : ${PRIMARY_COLOR};
     padding-bottom: 24px;
+
+    @media screen and (min-width: 778px) {
+        font-size: 34px;
+    }
 
 `
 const Detail = styled.div`
     display: flex;
     align-items: center;
-    font-size: 20px;
+    font-size: 18px;
     padding-bottom: 10px;
-    @media screen and (min-width : 668px) {
+    @media screen and (min-width : 778px) {
+        font-size: 20px;
     }
 `
 
@@ -99,7 +107,7 @@ const LangWrap = styled.div`
     /* padding : 12px; */
     width: 100%;
     flex-wrap: wrap;
-    @media screen and (min-width : 668px) {
+    @media screen and (min-width : 778px) {
         padding : 36px;
     }
 `
@@ -120,7 +128,7 @@ export default props => {
     const handleVisible = () => {
         let scrollOpacity;
 
-        if(window.innerWidth <=378) {
+        if (window.innerWidth <= 378) {
             scrollOpacity = 1000
         } else if (window.innerWidth <= 778) {
             scrollOpacity = 700
@@ -128,7 +136,7 @@ export default props => {
             scrollOpacity = 660
         }
 
-        if(window.scrollY >= scrollOpacity) {
+        if (window.scrollY >= scrollOpacity) {
             setVisible(true)
         } else {
             setVisible(false)
@@ -138,15 +146,15 @@ export default props => {
     const handleVisibleHidden = () => {
         let scrollHidden;
 
-        if(window.innerWidth <= 378) {
-            scrollHidden = 2513 
+        if (window.innerWidth <= 378) {
+            scrollHidden = 2513
         } else if (window.innerWidth <= 778) {
             scrollHidden = 2153
         } else {
             scrollHidden = 1711
         }
 
-        if(window.scrollY >= scrollHidden) {
+        if (window.scrollY >= scrollHidden) {
             setVisible(false)
         }
     }
@@ -155,34 +163,34 @@ export default props => {
     const handleBorderVisible = () => {
         let scrollThreshold;
 
-        if(window.innerWidth <= 378) {
+        if (window.innerWidth <= 378) {
             scrollThreshold = 1000
-        } else if (window.innerWidth <= 778){
+        } else if (window.innerWidth <= 778) {
             scrollThreshold = 700
         } else {
             scrollThreshold = 660
         }
 
-        if(window.scrollY >= scrollThreshold) {
+        if (window.scrollY >= scrollThreshold) {
             setBorderVisible(true)
-        } 
+        }
         else {
             setBorderVisible(false)
         }
- 
+
     }
 
-    useEffect(()=>{
+    useEffect(() => {
         window.addEventListener('scroll', handleBorderVisible);
-    },[])
+    }, [])
 
-    useEffect(()=>{
+    useEffect(() => {
         window.addEventListener('scroll', handleVisible)
-    },[])
+    }, [])
 
-    useEffect(()=>{
+    useEffect(() => {
         window.addEventListener('scroll', handleVisibleHidden)
-    },[])
+    }, [])
 
 
     const handleMouseHover = (e) => {
@@ -195,81 +203,81 @@ export default props => {
 
     return (
         <Container ref={section1Ref}>
-            <div style={{height : '100px'}}/>
+            <div style={{ height: '100px' }} />
             <Title $border={borderVisible}>Skills</Title>
             <VisibleWrap $visible={visible}>
-            <div style={{display : 'flex', alignItems:'center', justifyContent:'center'}}>
-            <Description>
-                <p>제가 생각하기에 프론트엔드 엔지니어란 디자이너, 백엔드 엔지니어,</p>
-                    <p>그리고 사용자와 <span>소통해야 하는 중요한 위치</span>에 있다고 생각합니다.</p>
-                <p>따라서 백엔드 영역의 기술 스택도 소홀히 하지 않고 있습니다.
-                </p>
-            </Description>
-            </div>
-            <LangWrap>
-                <Wrap
-                    onMouseEnter={handleMouseHover}
-                    onMouseLeave={hanldeMouseLeave}
-                >
-                    <LangTitle>Language</LangTitle>
-                    <Detail>JavaScript&nbsp;
-                        <img src='./skillsIcon/js.png' /></Detail>
-                    <Detail>Python&nbsp;
-                        <img src='./skillsIcon/python.png' /></Detail>
-                </Wrap>
+                <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+                    <Description>
+                        <p>제가 생각하기에 프론트엔드 엔지니어란 디자이너, 백엔드 엔지니어,</p>
+                        <p>그리고 사용자와 <span>소통해야 하는 중요한 위치</span>에 있다고 생각합니다.</p>
+                        <p>따라서 백엔드 영역의 기술 스택도 소홀히 하지 않고 있습니다.
+                        </p>
+                    </Description>
+                </div>
+                <LangWrap>
+                    <Wrap
+                        onMouseEnter={handleMouseHover}
+                        onMouseLeave={hanldeMouseLeave}
+                    >
+                        <LangTitle>Language</LangTitle>
+                        <Detail>JavaScript&nbsp;
+                            <img src='./skillsIcon/js.png' /></Detail>
+                        <Detail>Python&nbsp;
+                            <img src='./skillsIcon/python.png' /></Detail>
+                    </Wrap>
 
-                <Wrap
-                    onMouseEnter={handleMouseHover}
-                    onMouseLeave={hanldeMouseLeave}
+                    <Wrap
+                        onMouseEnter={handleMouseHover}
+                        onMouseLeave={hanldeMouseLeave}
 
-                >
-                    <LangTitle>Front-end</LangTitle>
-                    <Detail>React&nbsp;
-                        <img src='./skillsIcon/react.png' /></Detail>
-                    <Detail>Styled-Component&nbsp;
-                        <span style={{ fontSize: '32px' }}>💅</span>
-                    </Detail>
-                    <Detail>HTML5
-                        <img width='38px' src='./skillsIcon/html.png' /></Detail>
-                    <Detail>CSS3&nbsp;
-                        <img width='28px' src='./skillsIcon/css.png' /></Detail>
-                    <Detail>jQuery&nbsp;
-                        <img src='./skillsIcon/jquery.png' /></Detail>
-                </Wrap>
+                    >
+                        <LangTitle>Front-end</LangTitle>
+                        <Detail>React&nbsp;
+                            <img src='./skillsIcon/react.png' /></Detail>
+                        <Detail>Styled-Component&nbsp;
+                            <span style={{ fontSize: '32px' }}>💅</span>
+                        </Detail>
+                        <Detail>HTML5
+                            <img width='38px' src='./skillsIcon/html.png' /></Detail>
+                        <Detail>CSS3&nbsp;
+                            <img width='28px' src='./skillsIcon/css.png' /></Detail>
+                        <Detail>jQuery&nbsp;
+                            <img src='./skillsIcon/jquery.png' /></Detail>
+                    </Wrap>
 
-                <Wrap
-                    onMouseEnter={handleMouseHover}
-                    onMouseLeave={hanldeMouseLeave}
-                >
-                    <LangTitle>Back-end</LangTitle>
-                    <Detail>FastAPI&nbsp;
-                        <img src='./skillsIcon/fastapi.png' /></Detail>
-                    <Detail>NodeJs&nbsp;
-                        <img src='./skillsIcon/node.png' /></Detail>
-                </Wrap>
+                    <Wrap
+                        onMouseEnter={handleMouseHover}
+                        onMouseLeave={hanldeMouseLeave}
+                    >
+                        <LangTitle>Back-end</LangTitle>
+                        <Detail>FastAPI&nbsp;
+                            <img src='./skillsIcon/fastapi.png' /></Detail>
+                        <Detail>NodeJs&nbsp;
+                            <img src='./skillsIcon/node.png' /></Detail>
+                    </Wrap>
 
-                <Wrap
-                    onMouseEnter={handleMouseHover}
-                    onMouseLeave={hanldeMouseLeave}
-                >
-                    <LangTitle>Database</LangTitle>
-                    <Detail>MySQL&nbsp;
-                        <img src='./skillsIcon/mysql.png' /></Detail>
-                    <Detail>MongoDB
-                        <img src='./skillsIcon/mongo.png' /></Detail>
-                </Wrap>
+                    <Wrap
+                        onMouseEnter={handleMouseHover}
+                        onMouseLeave={hanldeMouseLeave}
+                    >
+                        <LangTitle>Database</LangTitle>
+                        <Detail>MySQL&nbsp;
+                            <img src='./skillsIcon/mysql.png' /></Detail>
+                        <Detail>MongoDB
+                            <img src='./skillsIcon/mongo.png' /></Detail>
+                    </Wrap>
 
-                <Wrap
-                    onMouseEnter={handleMouseHover}
-                    onMouseLeave={hanldeMouseLeave}
-                >
-                    <LangTitle>DevOps</LangTitle>
-                    <Detail>AWS&nbsp;
-                        <img src='./skillsIcon/aws.png' /></Detail>
-                    <Detail>Firebase&nbsp;
-                        <img src='./skillsIcon/firebase.png' /></Detail>
-                </Wrap>
-            </LangWrap>
+                    <Wrap
+                        onMouseEnter={handleMouseHover}
+                        onMouseLeave={hanldeMouseLeave}
+                    >
+                        <LangTitle>DevOps</LangTitle>
+                        <Detail>AWS&nbsp;
+                            <img src='./skillsIcon/aws.png' /></Detail>
+                        <Detail>Firebase&nbsp;
+                            <img src='./skillsIcon/firebase.png' /></Detail>
+                    </Wrap>
+                </LangWrap>
             </VisibleWrap>
         </Container>
 

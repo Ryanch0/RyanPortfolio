@@ -27,7 +27,7 @@ const Wrap = styled.div`
 
 const Title = styled.div`
     font-family: emoji;
-    font-size: 40px;
+    font-size: 34px;
     margin-bottom: 24px;
     color : transparent;
     padding-bottom: 10px;
@@ -39,7 +39,8 @@ const Title = styled.div`
         color : ${PRIMARY_COLOR};
     `}
 
-    @media screen and (min-width : 668px) {
+    @media screen and (min-width : 778px) {
+        font-size : 40px;
     }
 
 `
@@ -88,7 +89,8 @@ export default props => {
                 <Wrap>
                     <ProjectCard
                         title='LingoBell'
-                        period='2024.07.15 – 2024.08.26 (조성우 외 3인 팀 프로젝트)'
+                        period='2024.07.15 – 2024.08.26'
+                        periodDetail='(조성우 외 3인 팀 프로젝트)'
                         images={lingobellImage}
                         data={lingobellData}
                     >
@@ -97,7 +99,8 @@ export default props => {
 
                     <ProjectCard
                         title='StockVibe'
-                        period='2024.07.08 – 2024.08.14 (조성우 외 3인 팀 프로젝트)'
+                        period='2024.07.08 – 2024.08.14'
+                        periodDetail='(조성우 외 3인 팀 프로젝트)'
                         images={stockvibeImage}
                         data={stockvibeData}
                     >
@@ -106,7 +109,8 @@ export default props => {
 
                     <ProjectCard
                         title='TuneMoods'
-                        period='2024.06.14 – 2024.06.21 (개인 프로젝트)'
+                        period='2024.06.14 – 2024.06.21'
+                        periodDetail='(개인 프로젝트)'
                         images={tuneMoodsImage}
                         data={tuneMoodsData}
                     >
@@ -115,7 +119,8 @@ export default props => {
 
                     <ProjectCard
                         title='Liberté et Amour'
-                        period='2024.04.01 – 2024.04.25 (개인 프로젝트)'
+                        period='2024.04.01 – 2024.04.25'
+                        periodDetail='(개인 프로젝트)'
                         images={liberteImage}
                         data={liberteData}
                     >

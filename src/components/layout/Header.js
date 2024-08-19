@@ -25,8 +25,8 @@ const Container = styled.div`
 `
 
 const Logo = styled.div`
-    font-family: cursive;
-    font-size: 30px;
+    font-family: emoji;
+    font-size: 28px;
     padding-left: 12px;
     color : white;
     cursor: pointer;
