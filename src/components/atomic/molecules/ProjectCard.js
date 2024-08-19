@@ -84,12 +84,9 @@ const CarouselWrap = styled.div`
     align-items: center;
     width: 100%;
     max-width: 600px;
-    min-height: 400px;
     max-height: 600px;
-    border : 1px solid white;
     border-radius :12px ;
     @media screen and (min-width : 778px) {
-    min-height: 500px;
     margin-top: 38px;
   }
 `
@@ -161,7 +158,6 @@ const RightButtonArea = styled(ButtonArea)`
 `;
 
 const IndexCounter = styled.div`
-    padding-top: 24px;
     font-size: 14px;
     >span{
         padding : 0 12px 0 12px;
