@@ -100,7 +100,7 @@ export default props => {
                 <SecondDetail>
                     <Myinfo><span>🎓</span> 수원대학교 (전자재료공학과)</Myinfo>
                     <Myinfo><span>📞</span> 010-8209-9297</Myinfo>
-                    <Myinfo><img src='./github.png' />
+                    <Myinfo><img src='./skillsIcon/github.png' />
                     <a
                      href='https://github.com/Ryanch0'
                      target='_blank'

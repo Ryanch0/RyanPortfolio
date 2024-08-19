@@ -66,7 +66,7 @@ const AboutMe = styled.div`
     font-size: 40px;
     color : transparent;
     padding-bottom: 10px;
-    margin-bottom: 40px;
+    margin-bottom: 36px;
     padding-top : 48px;
     border-bottom: 1px solid transparent;
     transition: border-bottom-color 1s ease-in-out, color 0.4s ease-in-out;

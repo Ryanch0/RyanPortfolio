@@ -3,7 +3,11 @@ import styled from 'styled-components'
 import { PRIMARY_COLOR } from '../../consts/color'
 import { ScrollContext } from '../../contexts/ScrollContext'
 import ProjectCard from '../atomic/molecules/ProjectCard'
-import SampleData from '../atomic/atoms/SampleData'
+import LingobellContent from '../atomic/atoms/LingobellContent'
+import { liberteData, liberteImage, lingobellData, lingobellImage, stockvibeData, stockvibeImage, tuneMoodsData, tuneMoodsImage } from '../../consts/projectData'
+import StockvibeContent from '../atomic/atoms/StockvibeContent'
+import LiberteContent from '../atomic/atoms/LiberteContent'
+import TunemoodsContent from '../atomic/atoms/TunemoodsContent'
 
 
 
@@ -75,20 +79,6 @@ export default props => {
         window.addEventListener('scroll', handleBorderVisible);
     }, [])
 
-    const images = [
-        './lingo.png',
-        'https://via.placeholder.com/600x400?text=Image+2',
-        'https://via.placeholder.com/600x400?text=Image+3',
-    ];
-
-    const lingobellData = {
-        mainContent: '실시간 1:1 영상통화와 사용자의 관심사 및 언어별 stt번역 생성, ai퀴즈 및 주제추천이 가능한 언어교환 플랫폼',
-        frontEnd: 'React, Styled-Components',
-        backEnd: 'FastAPI, NodeJs',
-        dataBase: 'MySQL',
-        baas: 'Firebase (Authentication, Cloud Messaging, Realtime Database), Google Cloud Storage',
-        url : 'https://www.youtube.com/watch?v=9Urj-Ce82VY'
-    }
 
     return (
         <Container ref={section2Ref}>
@@ -99,10 +89,37 @@ export default props => {
                     <ProjectCard
                         title='LingoBell'
                         period='2024.07.15 – 2024.08.26 (조성우 외 3인 팀 프로젝트)'
-                        images={images}
+                        images={lingobellImage}
                         data={lingobellData}
                     >
-                        <SampleData/>
+                        <LingobellContent/>
+                    </ProjectCard>
+
+                    <ProjectCard
+                        title='StockVibe'
+                        period='2024.07.08 – 2024.08.14 (조성우 외 3인 팀 프로젝트)'
+                        images={stockvibeImage}
+                        data={stockvibeData}
+                    >
+                        <StockvibeContent/>
+                    </ProjectCard>
+
+                    <ProjectCard
+                        title='TuneMoods'
+                        period='2024.06.14 – 2024.06.21 (개인 프로젝트)'
+                        images={tuneMoodsImage}
+                        data={tuneMoodsData}
+                    >
+                        <TunemoodsContent/>
+                    </ProjectCard>
+
+                    <ProjectCard
+                        title='Liberté et Amour'
+                        period='2024.04.01 – 2024.04.25 (개인 프로젝트)'
+                        images={liberteImage}
+                        data={liberteData}
+                    >
+                        <LiberteContent/>
                     </ProjectCard>
                 </Wrap>
             </VisibleWrap>

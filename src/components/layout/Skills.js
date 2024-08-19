@@ -213,9 +213,9 @@ export default props => {
                 >
                     <LangTitle>Language</LangTitle>
                     <Detail>JavaScript&nbsp;
-                        <img src='./js.png' /></Detail>
+                        <img src='./skillsIcon/js.png' /></Detail>
                     <Detail>Python&nbsp;
-                        <img src='./python.png' /></Detail>
+                        <img src='./skillsIcon/python.png' /></Detail>
                 </Wrap>
 
                 <Wrap
@@ -225,16 +225,16 @@ export default props => {
                 >
                     <LangTitle>Front-end</LangTitle>
                     <Detail>React&nbsp;
-                        <img src='./react.png' /></Detail>
+                        <img src='./skillsIcon/react.png' /></Detail>
                     <Detail>Styled-Component&nbsp;
                         <span style={{ fontSize: '32px' }}>💅</span>
                     </Detail>
                     <Detail>HTML5
-                        <img width='38px' src='./html.png' /></Detail>
+                        <img width='38px' src='./skillsIcon/html.png' /></Detail>
                     <Detail>CSS3&nbsp;
-                        <img width='28px' src='./css.png' /></Detail>
+                        <img width='28px' src='./skillsIcon/css.png' /></Detail>
                     <Detail>jQuery&nbsp;
-                        <img src='./jquery.png' /></Detail>
+                        <img src='./skillsIcon/jquery.png' /></Detail>
                 </Wrap>
 
                 <Wrap
@@ -243,9 +243,9 @@ export default props => {
                 >
                     <LangTitle>Back-end</LangTitle>
                     <Detail>FastAPI&nbsp;
-                        <img src='./fastapi.png' /></Detail>
+                        <img src='./skillsIcon/fastapi.png' /></Detail>
                     <Detail>NodeJs&nbsp;
-                        <img src='./node.png' /></Detail>
+                        <img src='./skillsIcon/node.png' /></Detail>
                 </Wrap>
 
                 <Wrap
@@ -254,9 +254,9 @@ export default props => {
                 >
                     <LangTitle>Database</LangTitle>
                     <Detail>MySQL&nbsp;
-                        <img src='./mysql.png' /></Detail>
+                        <img src='./skillsIcon/mysql.png' /></Detail>
                     <Detail>MongoDB
-                        <img src='./mongo.png' /></Detail>
+                        <img src='./skillsIcon/mongo.png' /></Detail>
                 </Wrap>
 
                 <Wrap
@@ -265,9 +265,9 @@ export default props => {
                 >
                     <LangTitle>DevOps</LangTitle>
                     <Detail>AWS&nbsp;
-                        <img src='./aws.png' /></Detail>
+                        <img src='./skillsIcon/aws.png' /></Detail>
                     <Detail>Firebase&nbsp;
-                        <img src='./firebase.png' /></Detail>
+                        <img src='./skillsIcon/firebase.png' /></Detail>
                 </Wrap>
             </LangWrap>
             </VisibleWrap>

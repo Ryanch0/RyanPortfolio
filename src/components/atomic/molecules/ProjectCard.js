@@ -10,13 +10,14 @@ const Container = styled.div`
     border : 1px solid white;
     border-radius: 12px;
     padding: 32px;
+    margin-bottom: 24px;
 
     @media screen and (min-width: 778px) {
         padding: 48px;
     }
 `
 const Title = styled.div`
-    font-size: 24px;
+    font-size: 30px;
     font-weight: 600;
     padding-bottom: 16px;
 `
@@ -54,14 +55,13 @@ const FlexWrap = styled.div`
         align-items: start;
     }
 `
-// /////////////
 // 캐러셀 컨테이너
 const CarouselWrap = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
     width: 100%;
-    max-width: 500px;
+    max-width: 600px;
     min-height: 400px;
     max-height: 600px;
     border : 1px solid white;

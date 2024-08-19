@@ -9,7 +9,7 @@ const Container = styled.div`
 `
 
 const Footer = styled.div`
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     font-family: emoji;
     color : ${PRIMARY_COLOR};
         >span{
