@@ -6,6 +6,7 @@ import Footer from "./components/layout/Footer";
 import { ScrollProvider } from "./contexts/ScrollContext";
 import NewProjects from "./components/layout/NewProjects";
 import StartLayout from "./components/layout/StartLayout";
+import { useEffect } from "react";
 
 
 const Wrap = styled.div`

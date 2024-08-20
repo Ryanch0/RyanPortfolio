@@ -58,12 +58,20 @@ const Wrap = styled.div`
 `
 
 export default props => {
-    useEffect(() => {
+    useEffect(() => { //애니메이션 시간동안 스크롤 방지
         document.body.style.overflow = 'hidden';
         setTimeout(()=>{
             document.body.style.overflow = 'auto'
-        },2200)
+        },1990)
     }, [])
+
+    useEffect(()=>{ //리프레쉬 됐을 때 Y스크롤 최상단으로 위치
+        setTimeout(()=>{
+            window.scrollTo({
+            top : -99999999
+            });
+        },2000)
+    },[])
 
     return (
         <Container>
