@@ -162,6 +162,7 @@ const IndexCounter = styled.div`
     font-size: 14px;
     >span{
         padding : 0 12px 0 12px;
+        cursor: pointer;
     }
     
     @media screen and (min-width: 778px) {

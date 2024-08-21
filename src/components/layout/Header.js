@@ -36,11 +36,16 @@ const Logo = styled.div`
     }
 `
 const MenuWrap = styled.div`
+    height: 100%;
     display: flex;
 `
 const Menu = styled.div`
+    display: flex;
+    align-items: center;
+    text-align: center;
     font-family: emoji;
-    margin-right: 52px;
+    height: 100%;
+    padding : 0 28px 0 28px;
     cursor: pointer;
 `
 
