@@ -31,7 +31,7 @@ const Container = styled.div`
     z-index : 10000;
     width: 100vw;
     height: 100vh;
-    animation : ${backgroundAnimation} 0.5s ease 2s 1 forwards;
+    animation : ${backgroundAnimation} 0.8s ease 2s 1 forwards;
 `
 
 const LeftBox = styled.div`
@@ -39,14 +39,14 @@ const LeftBox = styled.div`
     background-color: black;
     width: 50%;
     height: 0;
-    animation: ${lineAnimation} 2s ease-in-out 0s 1 forwards, ${openAnimation} 0.5s ease 2s 1 forwards;
+    animation: ${lineAnimation} 2s ease-in-out 0s 1 forwards, ${openAnimation} 0.8s ease 2s 1 forwards;
 `
 const RightBox = styled.div`
     border-left : 0.1px solid white;
     background-color: black;
     width: 50%;
     height: 0;
-    animation: ${lineAnimation} 2s ease-in-out 0s 1 forwards, ${openAnimation} 0.5s ease 2s 1 forwards;
+    animation: ${lineAnimation} 2s ease-in-out 0s 1 forwards, ${openAnimation} 0.8s ease 2s 1 forwards;
 `
 const Wrap = styled.div`
     width: 100%;
