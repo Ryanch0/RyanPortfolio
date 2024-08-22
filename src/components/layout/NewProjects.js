@@ -99,7 +99,7 @@ export default props => {
 
                     <ProjectCard
                         title='StockVibe'
-                        period='2024.07.08 – 2024.08.14'
+                        period='2024.07.08 – 2024.07.14'
                         periodDetail='(조성우 외 3인 팀 프로젝트)'
                         images={stockvibeImage}
                         data={stockvibeData}
