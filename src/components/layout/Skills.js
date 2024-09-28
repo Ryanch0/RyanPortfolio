@@ -272,8 +272,6 @@ export default props => {
                         onMouseLeave={hanldeMouseLeave}
                     >
                         <LangTitle>BaaS</LangTitle>
-                        <Detail>AWS&nbsp;
-                            <img src='./skillsIcon/aws.png' /></Detail>
                         <Detail>Firebase&nbsp;
                             <img src='./skillsIcon/firebase.png' /></Detail>
                     </Wrap>
